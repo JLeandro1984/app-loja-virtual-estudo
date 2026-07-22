@@ -1,0 +1,30 @@
+/* ============================================================
+ * Tipografia
+ * ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-display);
+    font-weight: var(--peso-semibold);
+    line-height: var(--altura-linha-tit);
+    letter-spacing: -0.02em;
+    color: var(--cor-texto);
+}
+
+h1 { font-size: var(--fs-4xl); font-weight: var(--peso-bold); letter-spacing: -0.03em; }
+h2 { font-size: var(--fs-3xl); }
+h3 { font-size: var(--fs-2xl); }
+h4 { font-size: var(--fs-xl); }
+h5 { font-size: var(--fs-lg); }
+h6 { font-size: var(--fs-md); }
+
+p { color: var(--cor-texto-suave); }
+
+small { font-size: var(--fs-sm); color: var(--cor-texto-fraco); }
+
+strong, b { font-weight: var(--peso-semibold); }
+
+a {
+    color: var(--cor-acento);
+    transition: color var(--transicao-rapida);
+}
+a:hover { color: var(--cor-acento-hover); }
