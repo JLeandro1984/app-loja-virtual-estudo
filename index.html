@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
+
+    <title>Catálogo Premium | Curadoria Exclusiva</title>
+    <meta name="description" content="Descubra produtos exclusivos com curadoria premium. Envio rápido, atendimento personalizado e as melhores marcas em um só lugar." />
+    <meta name="keywords" content="catálogo, loja online, produtos premium, e-commerce" />
+    <meta name="author" content="Catálogo Premium" />
+    <link rel="canonical" href="https://catalogopremium.com.br/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Catálogo Premium | Curadoria Exclusiva" />
+    <meta property="og:description" content="Descubra produtos exclusivos com curadoria premium." />
+    <meta property="og:url" content="https://catalogopremium.com.br/" />
+    <meta property="og:image" content="assets/banners/og-image.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Catálogo Premium" />
+    <meta name="twitter:description" content="Curadoria exclusiva para você." />
+    <meta name="twitter:image" content="assets/banners/og-image.jpg" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+    <!-- Preconnect (perf) -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Ícones (única dependência externa permitida) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Preload da tipografia (system font stack; sem download) -->
+
+    <!-- CSS principal (imports em cascata) -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JSON-LD estruturado -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Catálogo Premium",
+        "url": "https://catalogopremium.com.br",
+        "image": "assets/logos/logo.svg",
+        "description": "Curadoria exclusiva de produtos premium."
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" role="banner">
+        <div class="header__inner container">
+            <a href="#/" class="header__brand" aria-label="Catálogo Premium — Início">
+                <img src="assets/logos/logo.svg" alt="" class="header__logo" width="40" height="40" />
+                <span class="header__brand-text">
+                    <strong data-config="loja.nome">Catálogo Premium</strong>
+                    <small data-config="loja.slogan">Curadoria exclusiva para você</small>
+                </span>
+            </a>
+
+            <form class="search" role="search" data-component="search">
+                <label for="input-busca" class="visually-hidden">Buscar produtos</label>
+                <i class="bi bi-search search__icon" aria-hidden="true"></i>
+                <input
+                    id="input-busca"
+                    type="search"
+                    class="search__input"
+                    placeholder="Buscar produtos, marcas, categorias..."
+                    autocomplete="off"
+                    inputmode="search"
+                />
+                <button type="button" class="search__clear" hidden aria-label="Limpar busca">
+                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <nav class="header__actions" aria-label="Ações do usuário">
+                <button type="button" class="icon-btn" data-action="toggle-theme" aria-label="Alternar tema" title="Alternar tema">
+                    <i class="bi bi-moon-stars" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" data-action="open-favorites" aria-label="Favoritos" title="Favoritos">
+                    <i class="bi bi-heart" aria-hidden="true"></i>
+                    <span class="icon-btn__badge" data-badge="favoritos" hidden>0</span>
+                </button>
+                <button type="button" class="icon-btn icon-btn--primary" data-action="open-cart" aria-label="Abrir carrinho" title="Carrinho">
+                    <i class="bi bi-bag" aria-hidden="true"></i>
+                    <span class="icon-btn__badge" data-badge="carrinho" hidden>0</span>
+                </button>
+            </nav>
+        </div>
+
+        <nav class="categorias-nav" aria-label="Categorias">
+            <div class="container categorias-nav__inner" data-slot="categorias-nav">
+                <!-- Preenchido dinamicamente -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="conteudo-principal" class="main" tabindex="-1">
+
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-titulo" data-slot="hero">
+            <!-- Preenchido dinamicamente -->
+        </section>
+
+        <!-- DESTAQUES -->
+        <section class="secao container" aria-labelledby="titulo-destaques">
+            <header class="secao__header">
+                <h2 id="titulo-destaques" class="secao__titulo">Destaques</h2>
+                <p class="secao__subtitulo">Selecionados especialmente para você</p>
+            </header>
+            <div class="produtos-grid" data-slot="destaques" aria-live="polite">
+                <!-- Skeletons carregados via JS -->
+            </div>
+        </section>
+
+        <!-- BANNER SECUNDÁRIO -->
+        <section class="container" aria-label="Ofertas em destaque">
+            <div class="banner-secundario" data-slot="banner-secundario"></div>
+        </section>
+
+        <!-- PROMOÇÕES -->
+        <section class="secao container" aria-labelledby="titulo-promocoes">
+            <header class="secao__header">
+                <h2 id="titulo-promocoes" class="secao__titulo">Ofertas imperdíveis</h2>
+                <p class="secao__subtitulo">Produtos em promoção por tempo limitado</p>
+            </header>
+            <div class="produtos-grid" data-slot="promocoes" aria-live="polite"></div>
+        </section>
+
+        <!-- CATÁLOGO COMPLETO -->
+        <section id="catalogo" class="secao container" aria-labelledby="titulo-catalogo">
+            <header class="secao__header secao__header--flex">
+                <div>
+                    <h2 id="titulo-catalogo" class="secao__titulo">Catálogo completo</h2>
+                    <p class="secao__subtitulo" data-slot="contador-resultado">Carregando produtos...</p>
+                </div>
+                <div class="toolbar">
+                    <button type="button" class="btn btn--ghost btn--icon" data-action="open-filtros" aria-label="Abrir filtros">
+                        <i class="bi bi-sliders" aria-hidden="true"></i>
+                        <span>Filtros</span>
+                    </button>
+                    <label class="ordenacao">
+                        <span class="visually-hidden">Ordenar por</span>
+                        <select data-component="ordenacao" class="ordenacao__select">
+                            <option value="destaque">Destaques</option>
+                            <option value="menor-preco">Menor preço</option>
+                            <option value="maior-preco">Maior preço</option>
+                            <option value="maior-desconto">Maior desconto</option>
+                            <option value="nome-asc">Nome (A-Z)</option>
+                            <option value="mais-recentes">Mais recentes</option>
+                            <option value="mais-vendidos">Mais vendidos</option>
+                        </select>
+                        <i class="bi bi-chevron-down ordenacao__icone" aria-hidden="true"></i>
+                    </label>
+                </div>
+            </header>
+
+            <div class="produtos-grid" data-slot="catalogo" aria-live="polite"></div>
+
+            <div class="paginacao" data-slot="paginacao" hidden>
+                <button type="button" class="btn btn--outline" data-action="carregar-mais">
+                    Carregar mais produtos
+                </button>
+            </div>
+
+            <div class="estado-vazio" data-slot="estado-vazio" hidden>
+                <i class="bi bi-search estado-vazio__icone" aria-hidden="true"></i>
+                <h3>Nenhum produto encontrado</h3>
+                <p>Tente ajustar os filtros ou a busca.</p>
+                <button type="button" class="btn btn--primary" data-action="limpar-filtros">Limpar filtros</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="rodape" role="contentinfo">
+        <div class="container rodape__inner">
+            <div class="rodape__coluna">
+                <img src="assets/logos/logo.svg" alt="" class="rodape__logo" width="48" height="48" />
+                <h3 data-config="loja.nome">Catálogo Premium</h3>
+                <p data-config="loja.slogan">Curadoria exclusiva para você</p>
+            </div>
+            <div class="rodape__coluna">
+                <h4>Atendimento</h4>
+                <p><i class="bi bi-clock" aria-hidden="true"></i> <span data-config="loja.horarioAtendimento"></span></p>
+                <p><i class="bi bi-envelope" aria-hidden="true"></i> <a data-config-attr='{"href":"mailto:{loja.email}","text":"loja.email"}'></a></p>
+                <p><i class="bi bi-geo-alt" aria-hidden="true"></i> <span data-config="loja.endereco"></span></p>
+            </div>
+            <div class="rodape__coluna">
+                <h4>Redes sociais</h4>
+                <div class="rodape__sociais" data-slot="redes-sociais"></div>
+            </div>
+            <div class="rodape__coluna">
+                <h4>Institucional</h4>
+                <ul class="rodape__links" data-slot="politicas"></ul>
+            </div>
+        </div>
+        <div class="rodape__base">
+            <p data-config="rodape.textoCopyright"></p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING ==================== -->
+    <a
+        href="#"
+        class="fab fab--instagram"
+        data-fab="instagram"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram da loja"
+        title="Siga no Instagram"
+    >
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+    </a>
+
+    <button type="button" class="fab fab--topo" data-action="voltar-topo" aria-label="Voltar ao topo" title="Voltar ao topo" hidden>
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ==================== DRAWER: CARRINHO ==================== -->
+    <aside class="drawer" data-drawer="carrinho" aria-hidden="true" aria-labelledby="drawer-carrinho-titulo">
+        <div class="drawer__overlay" data-action="close-drawer"></div>
+        <div class="drawer__painel" role="dialog" aria-modal="true">
+            <header class="drawer__header">
+                <h2 id="drawer-carrinho-titulo" class="drawer__titulo">
+                    <i class="bi bi-bag" aria-hidden="true"></i> Seu orçamento
+                </h2>
+                <button type="button" class="icon-btn" data-action="close-drawer" aria-label="Fechar">
+                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+            </header>
+            <div class="drawer__conteudo" data-slot="carrinho-itens"></div>
+            <footer class="drawer__rodape">
+                <div class="carrinho-total">
+                    <span>Total estimado</span>
+                    <strong data-slot="carrinho-total">R$ 0,00</strong>
+                </div>
+                <button type="button" class="btn btn--whatsapp btn--block" data-action="enviar-whatsapp" disabled>
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    Enviar orçamento pelo WhatsApp
+                </button>
+                <button type="button" class="btn btn--ghost btn--block" data-action="limpar-carrinho">
+                    Esvaziar carrinho
+                </button>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- ==================== DRAWER: FILTROS ==================== -->
+    <aside class="drawer drawer--esquerda" data-drawer="filtros" aria-hidden="true" aria-labelledby="drawer-filtros-titulo">
+        <div class="drawer__overlay" data-action="close-drawer"></div>
+        <div class="drawer__painel" role="dialog" aria-modal="true">
+            <header class="drawer__header">
+                <h2 id="drawer-filtros-titulo" class="drawer__titulo">
+                    <i class="bi bi-sliders" aria-hidden="true"></i> Filtros
+                </h2>
+                <button type="button" class="icon-btn" data-action="close-drawer" aria-label="Fechar">
+                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+            </header>
+            <div class="drawer__conteudo" data-slot="filtros"></div>
+            <footer class="drawer__rodape">
+                <button type="button" class="btn btn--outline btn--block" data-action="limpar-filtros">Limpar</button>
+                <button type="button" class="btn btn--primary btn--block" data-action="close-drawer">Aplicar</button>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- ==================== MODAL: PRODUTO ==================== -->
+    <dialog class="modal" data-modal="produto" aria-labelledby="modal-produto-titulo">
+        <div class="modal__conteudo" data-slot="modal-produto"></div>
+    </dialog>
+
+    <!-- ==================== TOAST ==================== -->
+    <div class="toast-container" data-slot="toasts" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script type="module" src="js/app.js"></script>
+    <noscript>
+        <div style="padding:2rem;text-align:center;">
+            Este catálogo requer JavaScript ativado para funcionar.
+        </div>
+    </noscript>
+</body>
+</html>

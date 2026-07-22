@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://catalogopremium.com.br/sitemap.xml
