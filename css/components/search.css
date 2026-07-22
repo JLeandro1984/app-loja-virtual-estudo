@@ -1,0 +1,59 @@
+/* ============================================================
+ * Search — input com estilo premium
+ * ============================================================ */
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 560px;
+    width: 100%;
+    justify-self: center;
+}
+
+.search__icon {
+    position: absolute;
+    left: var(--sp-4);
+    color: var(--cor-texto-fraco);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search__input {
+    width: 100%;
+    padding: var(--sp-3) var(--sp-5) var(--sp-3) calc(var(--sp-4) + 1.5rem);
+    background: var(--cor-borda);
+    border: 1px solid transparent;
+    border-radius: var(--raio-full);
+    font-size: var(--fs-sm);
+    color: var(--cor-texto);
+    transition: all var(--transicao-rapida);
+}
+
+.search__input::placeholder { color: var(--cor-texto-fraco); }
+
+.search__input:hover { background: var(--cor-borda-forte); }
+
+.search__input:focus {
+    background: var(--cor-superficie);
+    border-color: var(--cor-borda-forte);
+    box-shadow: var(--sombra-md);
+    outline: none;
+}
+
+.search__clear {
+    position: absolute;
+    right: var(--sp-2);
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--raio-full);
+    color: var(--cor-texto-fraco);
+    transition: all var(--transicao-rapida);
+}
+.search__clear:hover {
+    background: var(--cor-borda-forte);
+    color: var(--cor-texto);
+}
