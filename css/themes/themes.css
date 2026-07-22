@@ -1,1 +1,60 @@
+/* ============================================================
+ * Temas — Light (padrão) e Dark
+ * Controlado via [data-theme] no <html>
+ * ============================================================ */
 
+/* Dark mode manual */
+[data-theme="dark"] {
+    --cor-fundo:            #0A0A0A;
+    --cor-superficie:       #141414;
+    --cor-superficie-alta:  #1c1c1c;
+    --cor-superficie-glass: rgba(20, 20, 20, 0.72);
+    --cor-borda:            rgba(255, 255, 255, 0.08);
+    --cor-borda-forte:      rgba(255, 255, 255, 0.16);
+
+    --cor-texto:            #FAFAFA;
+    --cor-texto-suave:      #C4C4C4;
+    --cor-texto-fraco:      #8A8A8A;
+    --cor-texto-invertido:  #0A0A0A;
+
+    --cor-primaria:         #FAFAFA;
+    --cor-primaria-hover:   #E5E5E5;
+
+    --gradiente-hero:       linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 60%, #635BFF 100%);
+    --gradiente-glass:      linear-gradient(135deg, rgba(20,20,20,.6), rgba(20,20,20,.3));
+
+    --sombra-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --sombra-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --sombra-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+    --sombra-xl: 0 24px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* Auto: segue preferência do sistema */
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] {
+        --cor-fundo:            #0A0A0A;
+        --cor-superficie:       #141414;
+        --cor-superficie-alta:  #1c1c1c;
+        --cor-superficie-glass: rgba(20, 20, 20, 0.72);
+        --cor-borda:            rgba(255, 255, 255, 0.08);
+        --cor-borda-forte:      rgba(255, 255, 255, 0.16);
+
+        --cor-texto:            #FAFAFA;
+        --cor-texto-suave:      #C4C4C4;
+        --cor-texto-fraco:      #8A8A8A;
+        --cor-texto-invertido:  #0A0A0A;
+
+        --cor-primaria:         #FAFAFA;
+        --cor-primaria-hover:   #E5E5E5;
+
+        --gradiente-hero:       linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 60%, #635BFF 100%);
+        --gradiente-glass:      linear-gradient(135deg, rgba(20,20,20,.6), rgba(20,20,20,.3));
+
+        --sombra-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+        --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+        --sombra-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+        --sombra-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+        --sombra-xl: 0 24px 60px rgba(0, 0, 0, 0.7);
+    }
+}
