@@ -1,1 +1,37 @@
+/* ============================================================
+ * Catálogo Premium — Ponto de entrada CSS
+ * Estratégia: @import em cascata (base → layout → components → utilities)
+ * Permite cache granular e substituição isolada de camadas.
+ * ============================================================ */
 
+/* Base — tokens, reset, tipografia */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+/* Temas (light/dark via data-theme) */
+@import url("themes/themes.css");
+
+/* Layout — estrutura da página */
+@import url("layout/container.css");
+@import url("layout/header.css");
+@import url("layout/hero.css");
+@import url("layout/secao.css");
+@import url("layout/rodape.css");
+
+/* Componentes */
+@import url("components/buttons.css");
+@import url("components/search.css");
+@import url("components/badges.css");
+@import url("components/cards.css");
+@import url("components/skeleton.css");
+@import url("components/drawer.css");
+@import url("components/modal.css");
+@import url("components/filtros.css");
+@import url("components/toast.css");
+@import url("components/fab.css");
+@import url("components/banner.css");
+
+/* Animações e utilitárias (por último para permitir override) */
+@import url("animations/animations.css");
+@import url("utilities/utilities.css");
