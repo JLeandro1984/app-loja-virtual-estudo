@@ -1,0 +1,63 @@
+{
+  "loja": {
+    "nome": "Catálogo Premium",
+    "slogan": "Curadoria exclusiva para você",
+    "logo": "assets/logos/logo.svg",
+    "logoDark": "assets/logos/logo-dark.svg",
+    "email": "contato@catalogopremium.com.br",
+    "telefone": "+55 (11) 9 0000-0000",
+    "endereco": "São Paulo, SP",
+    "horarioAtendimento": "Seg. a Sáb. — 09h às 19h"
+  },
+  "redes": {
+    "whatsapp": "5511900000000",
+    "instagram": "https://instagram.com/catalogopremium",
+    "facebook": "https://facebook.com/catalogopremium",
+    "tiktok": ""
+  },
+  "pagamento": {
+    "pix": "contato@catalogopremium.com.br",
+    "parcelamentoPadrao": "até 10x sem juros"
+  },
+  "tema": {
+    "padrao": "auto",
+    "corPrimaria": "#0A0A0A",
+    "corSecundaria": "#F5A623",
+    "corAcento": "#635BFF"
+  },
+  "catalogo": {
+    "produtosPorPagina": 12,
+    "ordenacaoPadrao": "destaque",
+    "exibirEstoque": true,
+    "exibirPromocoes": true
+  },
+  "whatsappMensagem": {
+    "saudacao": "Olá! Tenho interesse nos seguintes produtos:",
+    "assinatura": "Gostaria de mais informações. Obrigado!",
+    "incluirDataHora": true,
+    "incluirLinkProduto": false
+  },
+  "seo": {
+    "titulo": "Catálogo Premium | Curadoria Exclusiva",
+    "descricao": "Descubra produtos exclusivos com curadoria premium. Envio rápido, atendimento personalizado e as melhores marcas em um só lugar.",
+    "keywords": "catálogo, loja online, produtos premium, e-commerce",
+    "url": "https://catalogopremium.com.br",
+    "imagemCompartilhamento": "assets/banners/og-image.jpg"
+  },
+  "rodape": {
+    "textoCopyright": "© 2026 Catálogo Premium. Todos os direitos reservados.",
+    "politicas": [
+      { "titulo": "Política de Privacidade", "url": "#/privacidade" },
+      { "titulo": "Termos de Uso", "url": "#/termos" },
+      { "titulo": "Trocas e Devoluções", "url": "#/trocas" }
+    ]
+  },
+  "features": {
+    "favoritos": true,
+    "compartilhamento": true,
+    "botaoInstagramFlutuante": true,
+    "botaoVoltarTopo": true,
+    "modoEscuro": true,
+    "infiniteScroll": false
+  }
+}

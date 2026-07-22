@@ -1,0 +1,8 @@
+[
+  { "id": "perfumes",     "nome": "Perfumes",     "icone": "bi-droplet-half",    "ordem": 1 },
+  { "id": "cosmeticos",   "nome": "Cosméticos",   "icone": "bi-flower1",         "ordem": 2 },
+  { "id": "acessorios",   "nome": "Acessórios",   "icone": "bi-gem",             "ordem": 3 },
+  { "id": "eletronicos",  "nome": "Eletrônicos",  "icone": "bi-cpu",             "ordem": 4 },
+  { "id": "moda",         "nome": "Moda",         "icone": "bi-bag-heart",       "ordem": 5 },
+  { "id": "casa",         "nome": "Casa & Decoração", "icone": "bi-house-heart", "ordem": 6 }
+]

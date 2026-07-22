@@ -1,1 +1,22 @@
-
+[
+  {
+    "id": 1,
+    "titulo": "Coleção Premium 2026",
+    "subtitulo": "Curadoria exclusiva, entrega rápida.",
+    "cta": "Ver coleção",
+    "link": "#/categoria/perfumes",
+    "imagem": "assets/banners/banner-1.jpg",
+    "posicao": "hero",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "titulo": "Ofertas da semana",
+    "subtitulo": "Até 40% OFF em itens selecionados.",
+    "cta": "Aproveitar",
+    "link": "#/promocoes",
+    "imagem": "assets/banners/banner-2.jpg",
+    "posicao": "secundario",
+    "ativo": true
+  }
+]

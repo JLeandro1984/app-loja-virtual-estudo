@@ -1,0 +1,8 @@
+[
+  { "id": "aurora",   "nome": "Aurora" },
+  { "id": "nova",     "nome": "Nova" },
+  { "id": "lumen",    "nome": "Lúmen" },
+  { "id": "orion",    "nome": "Órion" },
+  { "id": "verano",   "nome": "Verano" },
+  { "id": "prisma",   "nome": "Prisma" }
+]

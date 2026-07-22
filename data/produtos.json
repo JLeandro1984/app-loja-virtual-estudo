@@ -1,0 +1,333 @@
+[
+  {
+    "id": 1,
+    "sku": "PRF-001",
+    "nome": "Perfume Aurora Noir 100ml",
+    "slug": "perfume-aurora-noir-100ml",
+    "descricaoCurta": "Fragrância amadeirada com notas de baunilha e âmbar.",
+    "descricao": "Perfume unissex com composição sofisticada e fixação prolongada. Ideal para ocasiões especiais, apresenta notas de saída cítricas, coração floral e fundo amadeirado.",
+    "caracteristicas": [
+      "Volume: 100ml",
+      "Família olfativa: Amadeirada",
+      "Fixação: 10 a 12 horas",
+      "Origem: França"
+    ],
+    "categoria": "perfumes",
+    "marca": "aurora",
+    "preco": 599.90,
+    "promocao": 449.90,
+    "parcelamento": "10x sem juros",
+    "estoque": true,
+    "destaque": true,
+    "novo": false,
+    "maisVendido": true,
+    "tags": ["premium", "unissex"],
+    "imagens": [
+      "assets/produtos/1-1.jpg",
+      "assets/produtos/1-2.jpg",
+      "assets/produtos/1-3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "sku": "COS-002",
+    "nome": "Sérum Facial Lúmen Vitamina C",
+    "slug": "serum-facial-lumen-vitamina-c",
+    "descricaoCurta": "Antioxidante que ilumina e uniformiza o tom da pele.",
+    "descricao": "Sérum concentrado com 15% de vitamina C estabilizada, ácido hialurônico e vitamina E. Combate radicais livres, ilumina e melhora a firmeza da pele.",
+    "caracteristicas": [
+      "Volume: 30ml",
+      "Uso: Diário",
+      "Vegano e cruelty-free",
+      "Dermatologicamente testado"
+    ],
+    "categoria": "cosmeticos",
+    "marca": "lumen",
+    "preco": 189.90,
+    "promocao": null,
+    "parcelamento": "6x sem juros",
+    "estoque": true,
+    "destaque": true,
+    "novo": true,
+    "maisVendido": false,
+    "tags": ["skincare", "vegano"],
+    "imagens": [
+      "assets/produtos/2-1.jpg",
+      "assets/produtos/2-2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "sku": "ACE-003",
+    "nome": "Colar Prisma Ouro 18k",
+    "slug": "colar-prisma-ouro-18k",
+    "descricaoCurta": "Colar delicado em ouro 18k com pingente geométrico.",
+    "descricao": "Peça artesanal em ouro 18k, design contemporâneo e caimento leve. Acompanha certificado de autenticidade e embalagem premium.",
+    "caracteristicas": [
+      "Material: Ouro 18k",
+      "Peso: 3,2g",
+      "Comprimento: 45cm",
+      "Fecho: Boia"
+    ],
+    "categoria": "acessorios",
+    "marca": "prisma",
+    "preco": 2199.00,
+    "promocao": 1899.00,
+    "parcelamento": "12x sem juros",
+    "estoque": true,
+    "destaque": true,
+    "novo": true,
+    "maisVendido": false,
+    "tags": ["premium", "ouro"],
+    "imagens": [
+      "assets/produtos/3-1.jpg",
+      "assets/produtos/3-2.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "sku": "ELE-004",
+    "nome": "Fone Bluetooth Nova Pro",
+    "slug": "fone-bluetooth-nova-pro",
+    "descricaoCurta": "Cancelamento de ruído ativo e 40h de bateria.",
+    "descricao": "Fone over-ear com ANC híbrido, drivers de 40mm, codec LDAC e 40 horas de reprodução. Design ergonômico com almofadas em memory foam.",
+    "caracteristicas": [
+      "Bluetooth 5.3",
+      "ANC Híbrido",
+      "Bateria: 40h",
+      "Peso: 265g"
+    ],
+    "categoria": "eletronicos",
+    "marca": "nova",
+    "preco": 1499.00,
+    "promocao": 1199.00,
+    "parcelamento": "10x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": false,
+    "maisVendido": true,
+    "tags": ["áudio", "premium"],
+    "imagens": [
+      "assets/produtos/4-1.jpg",
+      "assets/produtos/4-2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "sku": "MOD-005",
+    "nome": "Bolsa Verano Couro Legítimo",
+    "slug": "bolsa-verano-couro-legitimo",
+    "descricaoCurta": "Bolsa estruturada em couro legítimo, feita à mão.",
+    "descricao": "Fabricada artesanalmente em couro bovino curtido, com forro interno em algodão e alça ajustável. Compartimento interno com zíper.",
+    "caracteristicas": [
+      "Material: Couro legítimo",
+      "Dimensões: 30x22x12cm",
+      "Cor: Caramelo",
+      "Feito à mão"
+    ],
+    "categoria": "moda",
+    "marca": "verano",
+    "preco": 899.00,
+    "promocao": null,
+    "parcelamento": "8x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": true,
+    "maisVendido": false,
+    "tags": ["couro", "artesanal"],
+    "imagens": [
+      "assets/produtos/5-1.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "sku": "CAS-006",
+    "nome": "Vela Aromática Órion Cedro",
+    "slug": "vela-aromatica-orion-cedro",
+    "descricaoCurta": "Vela artesanal de soja com aroma amadeirado.",
+    "descricao": "Vela em cera de soja 100% natural com fragrância de cedro e sândalo. Duração aproximada de 45 horas. Recipiente em vidro reutilizável.",
+    "caracteristicas": [
+      "Cera de soja natural",
+      "Duração: 45h",
+      "Volume: 200g",
+      "Pavio de algodão"
+    ],
+    "categoria": "casa",
+    "marca": "orion",
+    "preco": 129.90,
+    "promocao": 99.90,
+    "parcelamento": "3x sem juros",
+    "estoque": true,
+    "destaque": true,
+    "novo": false,
+    "maisVendido": true,
+    "tags": ["aromaterapia", "artesanal"],
+    "imagens": [
+      "assets/produtos/6-1.jpg",
+      "assets/produtos/6-2.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "sku": "PRF-007",
+    "nome": "Perfume Nova Blossom 50ml",
+    "slug": "perfume-nova-blossom-50ml",
+    "descricaoCurta": "Floral suave com notas de peônia e jasmim.",
+    "descricao": "Fragrância feminina delicada, com notas florais brancas e um toque cítrico. Ideal para o dia a dia.",
+    "caracteristicas": [
+      "Volume: 50ml",
+      "Família olfativa: Floral",
+      "Fixação: 6 a 8 horas"
+    ],
+    "categoria": "perfumes",
+    "marca": "nova",
+    "preco": 329.90,
+    "promocao": null,
+    "parcelamento": "6x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": true,
+    "maisVendido": false,
+    "tags": ["floral", "feminino"],
+    "imagens": [
+      "assets/produtos/7-1.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "sku": "ELE-008",
+    "nome": "Smartwatch Órion Fit",
+    "slug": "smartwatch-orion-fit",
+    "descricaoCurta": "Monitoramento avançado de saúde e 14 dias de bateria.",
+    "descricao": "Relógio inteligente com GPS, oximetria, ECG, mais de 100 modos esportivos e resistência 5ATM. Tela AMOLED de 1.43\".",
+    "caracteristicas": [
+      "Tela AMOLED 1.43\"",
+      "GPS integrado",
+      "Bateria: 14 dias",
+      "Resistência 5ATM"
+    ],
+    "categoria": "eletronicos",
+    "marca": "orion",
+    "preco": 1299.00,
+    "promocao": 999.00,
+    "parcelamento": "10x sem juros",
+    "estoque": true,
+    "destaque": true,
+    "novo": true,
+    "maisVendido": true,
+    "tags": ["wearable", "fitness"],
+    "imagens": [
+      "assets/produtos/8-1.jpg",
+      "assets/produtos/8-2.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "sku": "COS-009",
+    "nome": "Batom Matte Lúmen Ruby",
+    "slug": "batom-matte-lumen-ruby",
+    "descricaoCurta": "Cor intensa e acabamento matte de longa duração.",
+    "descricao": "Batom em bastão com pigmentação intensa, textura cremosa e acabamento matte. Fórmula vegana com óleo de jojoba.",
+    "caracteristicas": [
+      "Peso: 4g",
+      "Vegano",
+      "Longa duração",
+      "Acabamento matte"
+    ],
+    "categoria": "cosmeticos",
+    "marca": "lumen",
+    "preco": 79.90,
+    "promocao": 59.90,
+    "parcelamento": "3x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": false,
+    "maisVendido": true,
+    "tags": ["maquiagem", "vegano"],
+    "imagens": [
+      "assets/produtos/9-1.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "sku": "ACE-010",
+    "nome": "Relógio Aurora Classic",
+    "slug": "relogio-aurora-classic",
+    "descricaoCurta": "Relógio automático com pulseira em aço escovado.",
+    "descricao": "Movimento automático suíço, caixa em aço inoxidável 316L, cristal de safira antirreflexo. Resistência 10ATM.",
+    "caracteristicas": [
+      "Movimento automático",
+      "Caixa 40mm em aço 316L",
+      "Cristal de safira",
+      "Resistência 10ATM"
+    ],
+    "categoria": "acessorios",
+    "marca": "aurora",
+    "preco": 3499.00,
+    "promocao": null,
+    "parcelamento": "12x sem juros",
+    "estoque": false,
+    "destaque": true,
+    "novo": false,
+    "maisVendido": false,
+    "tags": ["luxo", "premium"],
+    "imagens": [
+      "assets/produtos/10-1.jpg",
+      "assets/produtos/10-2.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "sku": "MOD-011",
+    "nome": "Óculos de Sol Prisma Sky",
+    "slug": "oculos-de-sol-prisma-sky",
+    "descricaoCurta": "Lentes polarizadas com proteção UV400.",
+    "descricao": "Armação em acetato italiano, lentes polarizadas com proteção UV400. Design contemporâneo unissex.",
+    "caracteristicas": [
+      "Armação em acetato",
+      "Lentes polarizadas",
+      "UV400",
+      "Unissex"
+    ],
+    "categoria": "moda",
+    "marca": "prisma",
+    "preco": 459.00,
+    "promocao": 349.00,
+    "parcelamento": "6x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": true,
+    "maisVendido": false,
+    "tags": ["óculos", "verão"],
+    "imagens": [
+      "assets/produtos/11-1.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "sku": "CAS-012",
+    "nome": "Difusor de Ambiente Verano 250ml",
+    "slug": "difusor-de-ambiente-verano-250ml",
+    "descricaoCurta": "Aromatizador com essência importada e varetas de rattan.",
+    "descricao": "Difusor com essência premium de baunilha e âmbar, base alcoólica e varetas naturais de rattan. Duração aproximada de 3 meses.",
+    "caracteristicas": [
+      "Volume: 250ml",
+      "Duração: até 3 meses",
+      "Essência importada",
+      "Varetas naturais"
+    ],
+    "categoria": "casa",
+    "marca": "verano",
+    "preco": 179.90,
+    "promocao": null,
+    "parcelamento": "4x sem juros",
+    "estoque": true,
+    "destaque": false,
+    "novo": false,
+    "maisVendido": true,
+    "tags": ["aroma", "casa"],
+    "imagens": [
+      "assets/produtos/12-1.jpg"
+    ]
+  }
+]
