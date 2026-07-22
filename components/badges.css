@@ -1,1 +1,23 @@
+/* ============================================================
+ * Badges — indicadores contextuais
+ * ============================================================ */
 
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: var(--raio-full);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-semibold);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+}
+
+.badge--novo       { background: var(--cor-info);     color: #fff; }
+.badge--promocao   { background: var(--cor-erro);     color: #fff; }
+.badge--mais       { background: var(--cor-secundaria); color: #0A0A0A; }
+.badge--esgotado   { background: var(--cor-texto-fraco); color: #fff; }
+.badge--desconto   { background: var(--gradiente-marca); color: #fff; }

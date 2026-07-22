@@ -1,0 +1,98 @@
+/* ============================================================
+ * Botões — sistema completo
+ * ============================================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    padding: var(--sp-3) var(--sp-5);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    font-weight: var(--peso-semibold);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    transition:
+        background-color var(--transicao-rapida),
+        color var(--transicao-rapida),
+        border-color var(--transicao-rapida),
+        transform var(--transicao-rapida),
+        box-shadow var(--transicao-rapida);
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn i { font-size: 1.05em; }
+
+/* ---------- Variantes ---------- */
+.btn--primary {
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+}
+.btn--primary:hover {
+    background: var(--cor-primaria-hover);
+    box-shadow: var(--sombra-md);
+}
+
+.btn--acento {
+    background: var(--cor-acento);
+    color: #fff;
+}
+.btn--acento:hover {
+    background: var(--cor-acento-hover);
+    box-shadow: 0 8px 24px rgba(99, 91, 255, 0.35);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--cor-texto);
+    border-color: var(--cor-borda-forte);
+}
+.btn--outline:hover {
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+    border-color: var(--cor-texto);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--cor-texto);
+}
+.btn--ghost:hover { background: var(--cor-borda); }
+
+.btn--whatsapp {
+    background: var(--cor-whatsapp);
+    color: #fff;
+}
+.btn--whatsapp:hover {
+    background: var(--cor-whatsapp-hover);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+.btn--claro {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--cor-primaria);
+}
+.btn--claro:hover {
+    background: #fff;
+    box-shadow: var(--sombra-lg);
+}
+
+/* ---------- Tamanhos ---------- */
+.btn--sm { padding: var(--sp-2) var(--sp-3); font-size: var(--fs-xs); }
+.btn--lg { padding: var(--sp-4) var(--sp-6); font-size: var(--fs-md); }
+
+.btn--block { width: 100%; }
+
+.btn--icon { gap: var(--sp-2); }

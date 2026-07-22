@@ -1,0 +1,47 @@
+/* ============================================================
+ * FAB — botões flutuantes (Instagram, voltar-topo)
+ * ============================================================ */
+
+.fab {
+    position: fixed;
+    right: var(--sp-4);
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--raio-full);
+    color: #fff;
+    font-size: 1.4rem;
+    box-shadow: var(--sombra-lg);
+    z-index: var(--z-fab);
+    transition: all var(--transicao-base) var(--easing-out);
+    border: none;
+    cursor: pointer;
+}
+.fab:hover { transform: translateY(-3px) scale(1.05); box-shadow: var(--sombra-xl); }
+.fab:active { transform: scale(0.95); }
+
+.fab--instagram {
+    bottom: calc(var(--sp-5) + 60px);
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.fab--topo {
+    bottom: var(--sp-5);
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+.fab--topo:not([hidden]) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+    .fab { width: 48px; height: 48px; }
+    .fab--instagram { bottom: calc(var(--sp-4) + 56px); }
+}
