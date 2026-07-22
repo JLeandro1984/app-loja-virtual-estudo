@@ -1,1 +1,603 @@
+Acho que vale a pena estruturar isso como um **projeto profissional**, semelhante ao planejamento de um sistema corporativo. Em vez de começar codificando, definimos primeiro a arquitetura, os padrões e o roadmap. Isso reduz retrabalho e mantém o projeto consistente durante toda a evolução.
 
+---
+
+# Planejamento Geral do Projeto
+
+**Nome do Projeto:** Catálogo Digital Premium
+
+**Versão Inicial:** MVP 1.0
+
+**Objetivo:** Desenvolver um catálogo digital premium utilizando HTML5, CSS3 e JavaScript puro, preparado para evoluir futuramente para uma plataforma completa de vendas com backend, banco de dados e painel administrativo.
+
+---
+
+# Visão Geral
+
+## Objetivos Principais
+
+### MVP
+
+Desenvolver um catálogo premium que permita:
+
+* Exibir produtos.
+* Organizar produtos por categorias.
+* Pesquisar produtos.
+* Filtrar produtos.
+* Ordenar produtos.
+* Exibir detalhes completos.
+* Selecionar produtos.
+* Gerenciar um carrinho de interesse.
+* Enviar orçamento via WhatsApp.
+* Direcionar para Instagram.
+* Compartilhar produtos.
+* Funcionar perfeitamente em desktop e dispositivos móveis.
+
+---
+
+## Objetivos de Longo Prazo
+
+Transformar o projeto em uma plataforma completa contendo:
+
+* Painel Administrativo.
+* Cadastro de Produtos.
+* Controle de Estoque.
+* Cadastro de Clientes.
+* Pedidos.
+* Checkout.
+* Pagamentos.
+* Relatórios.
+* Dashboard.
+* API REST.
+* Banco de Dados.
+* Aplicativo PWA.
+
+---
+
+# Metodologia
+
+O desenvolvimento será incremental.
+
+Cada fase deverá ser completamente finalizada antes da próxima.
+
+Ao final de cada fase deverá existir uma aplicação funcional.
+
+---
+
+# Fase 0 — Arquitetura e Planejamento
+
+## Objetivo
+
+Definir toda a base do projeto.
+
+### Entregáveis
+
+* Visão geral.
+* Requisitos.
+* Arquitetura.
+* Roadmap.
+* Design System.
+* Estrutura de pastas.
+* Convenções.
+* Padrões.
+* Guia de desenvolvimento.
+
+---
+
+# Fase 1 — Fundação do Projeto
+
+## Objetivo
+
+Construir toda infraestrutura.
+
+### Entregáveis
+
+Estrutura HTML.
+
+Estrutura CSS.
+
+Estrutura JavaScript.
+
+Configuração inicial.
+
+Design Tokens.
+
+Sistema de Temas.
+
+Componentes base.
+
+Grid.
+
+Responsividade.
+
+Navegação.
+
+---
+
+# Fase 2 — Modelo de Dados
+
+## Objetivo
+
+Criar toda estrutura dos dados.
+
+### Arquivos
+
+config.json
+
+produtos.json
+
+categorias.json
+
+marcas.json
+
+banners.json
+
+promocoes.json
+
+---
+
+### Modelagem
+
+Produto
+
+Categoria
+
+Marca
+
+Banner
+
+Configuração
+
+Promoção
+
+Tema
+
+Carrinho
+
+Favoritos
+
+Histórico
+
+---
+
+# Fase 3 — Layout
+
+## Objetivo
+
+Construir toda interface.
+
+### Componentes
+
+Navbar
+
+Menu
+
+Banner
+
+Hero
+
+Pesquisa
+
+Filtros
+
+Cards
+
+Botões
+
+Badges
+
+Modal
+
+Drawer
+
+Toast
+
+Footer
+
+---
+
+# Fase 4 — Catálogo
+
+## Objetivo
+
+Implementar catálogo.
+
+### Funcionalidades
+
+Listagem.
+
+Paginação.
+
+Infinite Scroll.
+
+Lazy Loading.
+
+Pesquisa.
+
+Ordenação.
+
+Filtros.
+
+Detalhes.
+
+Produtos relacionados.
+
+---
+
+# Fase 5 — Produto
+
+Tela completa.
+
+### Recursos
+
+Galeria.
+
+Zoom.
+
+Descrição.
+
+Características.
+
+Preço.
+
+Promoção.
+
+Parcelamento.
+
+Compartilhar.
+
+Adicionar.
+
+Favoritar.
+
+---
+
+# Fase 6 — Carrinho
+
+Adicionar.
+
+Remover.
+
+Quantidade.
+
+Subtotal.
+
+Total.
+
+Persistência.
+
+LocalStorage.
+
+---
+
+# Fase 7 — Comunicação
+
+WhatsApp.
+
+Instagram.
+
+Facebook.
+
+Web Share API.
+
+QR Code.
+
+PDF.
+
+---
+
+# Fase 8 — Configurações
+
+Tema.
+
+Idioma.
+
+Layout.
+
+Preferências.
+
+Configurações da loja.
+
+---
+
+# Fase 9 — Recursos Premium
+
+Favoritos.
+
+Produtos vistos.
+
+Pesquisa recente.
+
+Comparação.
+
+Produtos semelhantes.
+
+Mais vendidos.
+
+Novidades.
+
+Destaques.
+
+---
+
+# Fase 10 — SEO
+
+Meta Tags.
+
+Open Graph.
+
+Twitter Cards.
+
+JSON-LD.
+
+Sitemap.
+
+Robots.
+
+Manifest.
+
+---
+
+# Fase 11 — Performance
+
+Lazy Loading.
+
+Debounce.
+
+Throttle.
+
+Intersection Observer.
+
+Compressão.
+
+WebP.
+
+AVIF.
+
+---
+
+# Fase 12 — Acessibilidade
+
+ARIA.
+
+Contraste.
+
+Teclado.
+
+Focus.
+
+Screen Reader.
+
+WCAG.
+
+---
+
+# Fase 13 — PWA
+
+Manifest.
+
+Service Worker.
+
+Offline.
+
+Cache.
+
+Instalação.
+
+---
+
+# Fase 14 — Painel Administrativo
+
+Mesmo sem backend.
+
+Preparar estrutura.
+
+Dashboard.
+
+Produtos.
+
+Categorias.
+
+Marcas.
+
+Configurações.
+
+---
+
+# Fase 15 — Evolução
+
+Preparação para:
+
+ASP.NET Core.
+
+Node.js.
+
+Laravel.
+
+Supabase.
+
+Firebase.
+
+REST.
+
+GraphQL.
+
+MySQL.
+
+SQL Server.
+
+PostgreSQL.
+
+MongoDB.
+
+---
+
+# Organização Técnica
+
+## HTML
+
+Semântico.
+
+SEO Ready.
+
+Acessível.
+
+---
+
+## CSS
+
+Variables.
+
+Grid.
+
+Flexbox.
+
+Clamp.
+
+Container Queries (quando apropriado).
+
+Componentização.
+
+---
+
+## JavaScript
+
+ES Modules.
+
+Arquitetura modular.
+
+Baixo acoplamento.
+
+Alta coesão.
+
+---
+
+# Estrutura do Projeto
+
+```
+catalogo-premium/
+
+├── index.html
+├── manifest.json
+├── robots.txt
+├── sitemap.xml
+
+├── assets/
+│   ├── icons/
+│   ├── logos/
+│   ├── banners/
+│   ├── products/
+│   ├── fonts/
+│   └── videos/
+
+├── data/
+│   ├── config.json
+│   ├── produtos.json
+│   ├── categorias.json
+│   ├── marcas.json
+│   ├── banners.json
+│   ├── promocoes.json
+│   └── faq.json
+
+├── css/
+│   ├── base/
+│   ├── layout/
+│   ├── components/
+│   ├── pages/
+│   ├── themes/
+│   ├── animations/
+│   └── utilities/
+
+├── js/
+│   ├── core/
+│   ├── services/
+│   ├── repositories/
+│   ├── components/
+│   ├── pages/
+│   ├── utils/
+│   ├── storage/
+│   ├── router/
+│   └── app.js
+
+├── admin/
+
+├── docs/
+
+└── tests/
+```
+
+---
+
+# Evolução Prevista
+
+| Versão | Objetivo                    |
+| ------ | --------------------------- |
+| 1.0    | Catálogo Premium            |
+| 1.1    | Painel Administrativo Local |
+| 1.2    | Importação/Exportação JSON  |
+| 2.0    | Backend REST                |
+| 2.1    | Banco de Dados              |
+| 2.2    | Login                       |
+| 2.3    | Pedidos                     |
+| 2.4    | Clientes                    |
+| 2.5    | Dashboard                   |
+| 3.0    | E-commerce Completo         |
+
+---
+
+# Cronograma Macro
+
+| Etapa          | Entrega |
+| -------------- | ------- |
+| Arquitetura    | ✅       |
+| Estrutura Base | ✅       |
+| Layout         | ✅       |
+| Catálogo       | ✅       |
+| Produto        | ✅       |
+| Carrinho       | ✅       |
+| WhatsApp       | ✅       |
+| SEO            | ✅       |
+| Performance    | ✅       |
+| PWA            | ✅       |
+| Painel         | 🔜      |
+| Backend        | 🔜      |
+
+---
+
+# Critérios de Qualidade
+
+Cada fase somente poderá ser considerada concluída quando atender aos seguintes critérios:
+
+* Arquitetura consistente e documentada.
+* Código modular e reutilizável.
+* Separação clara de responsabilidades.
+* HTML semântico.
+* CSS organizado por componentes.
+* JavaScript em módulos ES.
+* Responsividade completa.
+* Compatibilidade com navegadores modernos.
+* Performance otimizada.
+* Acessibilidade seguindo boas práticas.
+* Preparação para futura integração com APIs.
+* Ausência de código duplicado.
+* Ausência de dependências desnecessárias.
+* Organização adequada para manutenção e evolução.
+
+---
+
+## Minha recomendação final
+
+Em vez de produzir apenas um grande prompt, eu transformaria este projeto em uma **documentação de engenharia de software** organizada em múltiplos documentos (`/docs`), por exemplo:
+
+* `01-visao-geral.md`
+* `02-requisitos-funcionais.md`
+* `03-arquitetura.md`
+* `04-modelo-de-dados.md`
+* `05-design-system.md`
+* `06-plano-de-desenvolvimento.md`
+* `07-padroes-de-codigo.md`
+* `08-roadmap.md`
+* `09-criterios-de-qualidade.md`
+* `10-prompt-mestre.md`
+
+Essa organização facilita a manutenção, permite evoluir cada documento de forma independente e serve como referência durante todo o ciclo de vida do projeto. Além disso, o `10-prompt-mestre.md` pode consolidar e referenciar os demais documentos, orientando qualquer IA a seguir a arquitetura definida em vez de gerar uma solução isolada.

@@ -1,0 +1,1544 @@
+Antes de iniciar a implementação, a IA deve atuar como um Arquiteto de Software Sênior. Deve analisar todos os requisitos, identificar oportunidades de melhoria, apontar inconsistências, sugerir funcionalidades que agreguem valor, propor uma arquitetura mais robusta quando necessário e somente então iniciar a implementação. Durante todo o desenvolvimento, deve justificar decisões arquiteturais importantes, sempre priorizando escalabilidade, manutenibilidade, performance, reutilização de código e experiência do usuário. Caso identifique uma solução melhor que a especificada originalmente, deverá adotá-la e explicar tecnicamente o motivo.
+
+/catalogo
+│
+├── index.html
+├── css/
+│   ├── style.css
+│   ├── cards.css
+│   ├── responsive.css
+│   └── animations.css
+│
+├── js/
+│   ├── app.js
+│   ├── catalog.js
+│   ├── cart.js
+│   ├── whatsapp.js
+│   ├── filters.js
+│   ├── modal.js
+│   └── xml-reader.js
+│
+├── assets/
+│   ├── produtos/
+│   ├── banners/
+│   └── icons/
+│
+└── data/
+    └── produtos.xml
+
+
+ Prompt parte 1
+
+ # Objetivo
+
+Desenvolver um catálogo digital Premium totalmente responsivo utilizando apenas HTML5, CSS3 e JavaScript ES6+, sem backend e sem banco de dados.
+
+O projeto deve possuir aparência profissional, código limpo, arquitetura modular, alta organização e ser preparado para uma futura migração para uma API REST, mantendo o menor impacto possível na estrutura do frontend.
+
+O resultado deve transmitir qualidade semelhante a grandes e-commerces modernos.
+
+---
+
+# Objetivos do projeto
+
+O catálogo servirá para divulgar produtos.
+
+O visitante poderá:
+
+- visualizar os produtos
+- pesquisar produtos
+- filtrar produtos
+- ordenar produtos
+- visualizar detalhes
+- selecionar vários produtos
+- alterar quantidade
+- visualizar o total da compra
+- enviar automaticamente sua lista de interesse para WhatsApp
+- acessar o Instagram da loja
+- compartilhar produtos
+
+Não haverá pagamento online.
+
+O objetivo é apenas facilitar o contato comercial.
+
+---
+
+# Tecnologias obrigatórias
+
+HTML5
+
+CSS3
+
+JavaScript ES6+
+
+Não utilizar frameworks.
+
+Não utilizar Bootstrap.
+
+Não utilizar jQuery.
+
+Não utilizar bibliotecas externas, salvo ícones (Font Awesome ou Bootstrap Icons).
+
+Todo código deve ser Vanilla JavaScript.
+
+---
+
+# Arquitetura
+
+Utilizar arquitetura modular.
+
+Organizar os arquivos da seguinte forma:
+
+/catalogo
+
+index.html
+
+/css
+
+style.css
+
+variables.css
+
+layout.css
+
+components.css
+
+animations.css
+
+responsive.css
+
+/js
+
+app.js
+
+catalog.js
+
+product.js
+
+cart.js
+
+storage.js
+
+search.js
+
+filters.js
+
+sort.js
+
+modal.js
+
+whatsapp.js
+
+instagram.js
+
+theme.js
+
+utils.js
+
+data-loader.js
+
+/assets
+
+produtos/
+
+banners/
+
+icons/
+
+/data
+
+produtos.json
+
+---
+
+# Fonte de dados
+
+Os produtos serão carregados inicialmente através de um arquivo JSON.
+
+O projeto deve ser preparado para que futuramente seja possível substituir apenas o DataLoader para consumir uma API REST sem alterar os demais módulos.
+
+Exemplo:
+
+[
+  {
+    "id":1,
+    "nome":"Perfume XYZ",
+    "descricao":"Descrição",
+    "categoria":"Perfumes",
+    "marca":"Marca X",
+    "preco":259.90,
+    "promocao":199.90,
+    "estoque":true,
+    "destaque":true,
+    "novo":false,
+    "parcelamento":"6x sem juros",
+    "imagens":[
+        "assets/produtos/1-1.jpg",
+        "assets/produtos/1-2.jpg"
+    ]
+  }
+]
+
+---
+
+# Layout
+
+Inspirar-se visualmente em:
+
+Apple
+
+Samsung Store
+
+Nike
+
+Mercado Livre Premium
+
+Amazon
+
+Magazine Luiza
+
+O layout deve transmitir sofisticação.
+
+Características:
+
+Muito espaço em branco
+
+Tipografia moderna
+
+Glassmorphism leve
+
+Sombras suaves
+
+Cards elegantes
+
+Animações discretas
+
+Transições suaves
+
+Gradientes modernos
+
+Ícones minimalistas
+
+Totalmente responsivo
+
+Dark Mode
+
+Light Mode
+
+---
+
+# Página inicial
+
+Banner principal
+
+Produtos em destaque
+
+Categorias
+
+Produtos em promoção
+
+Todos os produtos
+
+Rodapé profissional
+
+---
+
+# Card do produto
+
+Imagem
+
+Nome
+
+Categoria
+
+Descrição resumida
+
+Preço
+
+Preço promocional (quando existir)
+
+Preço antigo riscado
+
+Percentual de desconto
+
+Parcelamento
+
+Botão Ver detalhes
+
+Botão Adicionar
+
+Favoritar
+
+Badge:
+
+Novo
+
+Promoção
+
+Mais vendido
+
+---
+
+# Página de detalhes
+
+Galeria de imagens
+
+Zoom
+
+Descrição completa
+
+Características
+
+Categoria
+
+Preço
+
+Preço promocional
+
+Parcelamento
+
+Quantidade
+
+Adicionar ao carrinho
+
+Compartilhar
+
+---
+
+# Pesquisa
+
+Pesquisar enquanto digita.
+
+Pesquisar por:
+
+Nome
+
+Descrição
+
+Categoria
+
+Marca
+
+---
+
+# Filtros
+
+Categoria
+
+Marca
+
+Promoção
+
+Novidades
+
+Mais vendidos
+
+Faixa de preço
+
+Disponibilidade
+
+---
+
+# Ordenação
+
+Menor preço
+
+Maior preço
+
+Maior desconto
+
+Nome
+
+Mais recentes
+
+Mais vendidos
+
+---
+
+# Carrinho
+
+Adicionar
+
+Remover
+
+Alterar quantidade
+
+Calcular subtotal
+
+Calcular total
+
+Persistir utilizando LocalStorage.
+
+---
+
+# Mensagem para WhatsApp
+
+Ao clicar em "Enviar orçamento", gerar automaticamente uma mensagem como:
+
+Olá!
+
+Tenho interesse nos seguintes produtos:
+
+• Produto A
+
+Quantidade: 2
+
+Valor unitário: R$ 99,90
+
+Subtotal: R$ 199,80
+
+--------------------------------
+
+• Produto B
+
+Quantidade: 1
+
+Valor unitário: R$ 55,00
+
+Subtotal: R$ 55,00
+
+--------------------------------
+
+Total estimado:
+
+R$ 254,80
+
+Gostaria de mais informações.
+
+Abrir automaticamente:
+
+https://wa.me/55SEUNUMERO?text=...
+
+---
+
+# Instagram
+
+Adicionar botão flutuante direcionando para o perfil da loja.
+
+---
+
+# Recursos extras
+
+Favoritos
+
+Compartilhar produto
+
+Toast Notifications
+
+Skeleton Loading
+
+Lazy Loading das imagens
+
+Infinite Scroll (opcional)
+
+Paginação
+
+Dark Mode
+
+Botão voltar ao topo
+
+Menu mobile
+
+Breadcrumb
+
+Animações suaves
+
+Hover Effects
+
+Microinterações
+
+---
+
+# Performance
+
+Lazy Loading
+
+Intersection Observer
+
+Debounce na pesquisa
+
+Código modular
+
+Separação de responsabilidades
+
+Sem duplicação de código
+
+Funções pequenas
+
+Nomes semânticos
+
+Constantes centralizadas
+
+---
+
+# CSS
+
+Utilizar:
+
+CSS Variables
+
+Flexbox
+
+Grid
+
+Clamp()
+
+Media Queries
+
+Animações utilizando apenas CSS.
+
+Evitar CSS repetido.
+
+Organizar por componentes.
+
+---
+
+# JavaScript
+
+Utilizar ES6+
+
+Classes apenas quando fizer sentido.
+
+Preferir módulos.
+
+Separação clara de responsabilidades.
+
+Nunca misturar regra de negócio com manipulação do DOM.
+
+Utilizar:
+
+Fetch API
+
+Template Literals
+
+Arrow Functions
+
+Destructuring
+
+Optional Chaining
+
+Nullish Coalescing
+
+Map
+
+Filter
+
+Reduce
+
+Sort
+
+LocalStorage
+
+SessionStorage apenas quando necessário.
+
+---
+
+# Qualidade
+
+Seguir princípios:
+
+SOLID (adaptado ao JavaScript)
+
+Clean Code
+
+DRY
+
+KISS
+
+YAGNI
+
+Arquitetura em camadas
+
+Código autodocumentado
+
+Comentários apenas quando realmente necessários.
+
+---
+
+# UX
+
+A navegação deve transmitir sensação de aplicação profissional.
+
+As animações devem ser suaves.
+
+O usuário deve conseguir encontrar um produto em poucos segundos.
+
+O carrinho deve estar sempre visível.
+
+A experiência deve funcionar perfeitamente em celular.
+
+---
+
+# Objetivo final
+
+O resultado deve parecer um pequeno e-commerce profissional, mesmo sendo totalmente estático.
+
+A estrutura do projeto deve estar preparada para uma futura migração para:
+
+Backend (Node.js, ASP.NET Core ou Laravel)
+
+Banco de dados (MySQL ou PostgreSQL)
+
+API REST
+
+Autenticação
+
+Painel administrativo
+
+Controle de estoque
+
+Pedidos
+
+Clientes
+
+Dashboard administrativo
+
+Sem necessidade de reescrever o frontend.
+
+
+Prompt parte 2
+
+Sugestões adicionais (Arquitetura e Evolução)
+
+# Arquitetura preparada para evolução
+
+Embora o projeto seja inicialmente estático (HTML, CSS e JavaScript), toda a arquitetura deve ser planejada para permitir evolução para um sistema completo sem necessidade de reescrever o frontend.
+
+Evitar qualquer solução temporária que dificulte a futura manutenção.
+
+Todo o código deve seguir padrões utilizados em projetos profissionais.
+
+---
+
+# Fonte de dados
+
+Utilizar JSON ao invés de XML.
+
+Justificativa:
+
+- leitura nativa pelo JavaScript
+- menor complexidade
+- maior performance
+- futura integração direta com APIs REST
+- formato amplamente utilizado no mercado
+
+Exemplo:
+
+/data
+
+produtos.json
+
+config.json
+
+categorias.json
+
+banners.json
+
+---
+
+# Arquivo config.json
+
+Criar um arquivo de configuração contendo informações da loja.
+
+Exemplo:
+
+Nome da loja
+
+Logo
+
+Telefone
+
+WhatsApp
+
+Instagram
+
+Facebook
+
+Email
+
+Mensagem padrão do WhatsApp
+
+Cor principal
+
+Cor secundária
+
+Tema padrão
+
+Quantidade de produtos por página
+
+Texto do rodapé
+
+Banner principal
+
+PIX
+
+Horário de atendimento
+
+Assim nenhuma dessas informações ficará fixa no código.
+
+---
+
+# Organização do JavaScript
+
+Cada módulo deve possuir apenas uma responsabilidade.
+
+Exemplo:
+
+CatalogService
+
+ProductService
+
+CartService
+
+StorageService
+
+SearchService
+
+FilterService
+
+SortService
+
+WhatsAppService
+
+ThemeService
+
+ConfigService
+
+DataLoader
+
+NotificationService
+
+Router
+
+Modal
+
+Gallery
+
+Cada módulo deve ser independente.
+
+---
+
+# Organização do CSS
+
+Separar o CSS em componentes.
+
+Exemplo:
+
+Buttons
+
+Cards
+
+Forms
+
+Navbar
+
+Footer
+
+Cart
+
+Modal
+
+Toast
+
+Badges
+
+Banner
+
+Search
+
+Filters
+
+Theme
+
+Animations
+
+Responsive
+
+Evitar arquivos enormes.
+
+---
+
+# Design System
+
+Criar um Design System simples utilizando CSS Variables.
+
+Exemplo:
+
+Cores
+
+Tipografia
+
+Espaçamentos
+
+Bordas
+
+Sombras
+
+Raio dos componentes
+
+Ícones
+
+Estados
+
+Hover
+
+Focus
+
+Disabled
+
+Success
+
+Warning
+
+Danger
+
+Primary
+
+Secondary
+
+Isso facilitará futuras alterações na identidade visual.
+
+---
+
+# Componentização
+
+Mesmo utilizando HTML puro, criar componentes reutilizáveis.
+
+Exemplo:
+
+Card de Produto
+
+Modal
+
+Botão
+
+Toast
+
+Loading
+
+Badge
+
+Input
+
+Select
+
+Banner
+
+Footer
+
+Navbar
+
+Carrinho
+
+Cada componente deve possuir responsabilidade única.
+
+---
+
+# SEO
+
+Preparar a página para mecanismos de busca.
+
+Adicionar:
+
+Meta Description
+
+Keywords
+
+Canonical
+
+Open Graph
+
+Twitter Cards
+
+JSON-LD
+
+Favicon
+
+Manifest
+
+robots.txt
+
+sitemap.xml
+
+---
+
+# Performance
+
+O projeto deve priorizar performance.
+
+Implementar:
+
+Lazy Loading
+
+Intersection Observer
+
+Debounce
+
+Throttle
+
+RequestAnimationFrame quando necessário
+
+Compressão das imagens
+
+WebP quando disponível
+
+Pré-carregamento apenas do necessário
+
+Minimizar reflows
+
+Evitar renderizações desnecessárias
+
+---
+
+# Acessibilidade
+
+Seguir boas práticas de acessibilidade.
+
+Utilizar:
+
+HTML semântico
+
+ARIA Labels
+
+Contraste adequado
+
+Navegação por teclado
+
+Focus visível
+
+Textos alternativos
+
+Hierarquia correta de títulos
+
+Compatibilidade com leitores de tela
+
+---
+
+# Experiência do usuário
+
+A navegação deve transmitir sensação de aplicação profissional.
+
+Adicionar:
+
+Skeleton Loading
+
+Hover elegante
+
+Animações discretas
+
+Transições suaves
+
+Toast Notifications
+
+Feedback visual em todas as ações
+
+Botão voltar ao topo
+
+Menu responsivo
+
+Indicador de carregamento
+
+Estado vazio
+
+Estado de erro
+
+Estado sem resultados
+
+---
+
+# Carrinho
+
+Persistir utilizando LocalStorage.
+
+Salvar:
+
+Produtos
+
+Quantidade
+
+Data
+
+Total
+
+Favoritos
+
+Tema escolhido
+
+Filtros utilizados
+
+Pesquisa recente
+
+O usuário deve conseguir fechar o navegador e retornar posteriormente mantendo seu carrinho.
+
+---
+
+# Compartilhamento
+
+Cada produto deve possuir um botão Compartilhar.
+
+Permitir compartilhar:
+
+WhatsApp
+
+Facebook
+
+Instagram (perfil da loja)
+
+Copiar link
+
+Web Share API quando suportada.
+
+---
+
+# WhatsApp
+
+Permitir configurar a mensagem através do config.json.
+
+Gerar automaticamente:
+
+Nome
+
+Quantidade
+
+Valor unitário
+
+Subtotal
+
+Total
+
+Data
+
+Observação final
+
+Tudo formatado automaticamente.
+
+---
+
+# Tema
+
+Implementar Dark Mode e Light Mode.
+
+Salvar automaticamente a preferência do usuário.
+
+Respeitar a preferência do sistema operacional na primeira visita.
+
+---
+
+# Estrutura preparada para API
+
+Toda leitura de dados deve passar pelo DataLoader.
+
+Hoje:
+
+JSON
+
+Amanhã:
+
+REST API
+
+GraphQL
+
+Firebase
+
+Supabase
+
+ASP.NET Core
+
+Node.js
+
+Laravel
+
+O restante da aplicação não deverá sofrer alterações.
+
+---
+
+# Estrutura preparada para painel administrativo
+
+Os dados devem ser organizados pensando em um futuro painel administrativo.
+
+Produtos
+
+Categorias
+
+Marcas
+
+Promoções
+
+Banners
+
+Clientes
+
+Pedidos
+
+Configurações
+
+Assim será possível substituir apenas a origem dos dados futuramente.
+
+---
+
+# PWA
+
+Preparar a aplicação para futura transformação em Progressive Web App.
+
+Estrutura preparada para:
+
+Manifest
+
+Service Worker
+
+Cache Offline
+
+Instalação como aplicativo
+
+Ícone próprio
+
+Splash Screen
+
+---
+
+# Código
+
+Seguir rigorosamente:
+
+Clean Code
+
+SOLID (adaptado para JavaScript)
+
+DRY
+
+KISS
+
+YAGNI
+
+SRP
+
+Baixo acoplamento
+
+Alta coesão
+
+Funções pequenas
+
+Métodos objetivos
+
+Nomes semânticos
+
+Sem comentários desnecessários
+
+Código autodocumentado
+
+---
+
+# Qualidade
+
+O código produzido deve refletir práticas de um desenvolvedor Front-end Sênior.
+
+Priorizar:
+
+Legibilidade
+
+Escalabilidade
+
+Reutilização
+
+Performance
+
+Segurança
+
+Manutenibilidade
+
+Organização
+
+Testabilidade
+
+Responsividade
+
+Experiência do usuário
+
+Evitar soluções improvisadas.
+
+Sempre optar por padrões consolidados do mercado.
+
+---
+
+# Resultado esperado
+
+O resultado final deve possuir aparência semelhante a um pequeno e-commerce premium, transmitindo qualidade profissional mesmo sem possuir backend.
+
+A aplicação deve estar preparada para crescer sem necessidade de reestruturação significativa.
+
+O objetivo é que, futuramente, seja possível adicionar apenas um backend e um banco de dados, preservando praticamente todo o frontend desenvolvido.
+
+Prompt parte 3
+ 
+ # Evolução planejada da plataforma
+
+Embora o projeto tenha como objetivo inicial ser um catálogo digital estático, toda a arquitetura deve ser concebida como a primeira versão de uma futura plataforma completa de vendas.
+
+O desenvolvimento deve priorizar a reutilização do frontend, permitindo que futuramente apenas a camada de dados seja substituída por uma API REST e um banco de dados.
+
+A estrutura deve permitir crescimento gradual sem necessidade de reescrever a aplicação.
+
+---
+
+# Painel Administrativo (Versão Inicial)
+
+Criar uma estrutura preparada para um futuro painel administrativo.
+
+Mesmo que inicialmente os dados sejam carregados por arquivos JSON, a arquitetura deverá prever uma área administrativa independente.
+
+Estrutura sugerida:
+
+/admin
+
+index.html
+
+login.html
+
+dashboard.html
+
+produtos.html
+
+categorias.html
+
+configuracoes.html
+
+Embora inicialmente algumas funcionalidades possam utilizar LocalStorage ou arquivos JSON, toda a organização deverá considerar uma futura integração com backend.
+
+---
+
+# Funcionalidades previstas para o painel
+
+A arquitetura deve prever suporte para:
+
+Cadastro de produtos
+
+Edição de produtos
+
+Exclusão de produtos
+
+Cadastro de categorias
+
+Cadastro de marcas
+
+Cadastro de banners
+
+Cadastro de promoções
+
+Gerenciamento das configurações da loja
+
+Organização por categorias
+
+Organização por marcas
+
+Produtos em destaque
+
+Produtos em promoção
+
+Novidades
+
+Mais vendidos
+
+Produtos indisponíveis
+
+Mesmo que algumas dessas funcionalidades não sejam implementadas inicialmente, a estrutura deve estar preparada para recebê-las.
+
+---
+
+# Dashboard Administrativo
+
+Preparar a arquitetura para um dashboard contendo indicadores como:
+
+Quantidade de produtos
+
+Quantidade de categorias
+
+Quantidade de promoções
+
+Produtos em destaque
+
+Produtos ativos
+
+Produtos inativos
+
+Produtos em promoção
+
+Quantidade de acessos (futuramente)
+
+Produtos mais visualizados (futuramente)
+
+Produtos mais compartilhados (futuramente)
+
+---
+
+# Configuração centralizada
+
+Toda configuração da aplicação deverá ser centralizada.
+
+Exemplo:
+
+Nome da loja
+
+Logo
+
+Cores
+
+Tema
+
+Telefone
+
+WhatsApp
+
+Instagram
+
+Facebook
+
+Email
+
+Endereço
+
+PIX
+
+Horário de atendimento
+
+Mensagem padrão do WhatsApp
+
+Texto do rodapé
+
+SEO
+
+Banners
+
+Redes sociais
+
+Ícones
+
+Quantidade de produtos por página
+
+Essas configurações não deverão ficar espalhadas pelo código.
+
+---
+
+# Recursos planejados
+
+A arquitetura deverá prever suporte para:
+
+Favoritos
+
+Lista de desejos
+
+Produtos relacionados
+
+Produtos semelhantes
+
+Comparação entre produtos
+
+Compartilhamento
+
+QR Code do produto
+
+Compartilhamento utilizando Web Share API
+
+Avaliações de produtos
+
+Comentários
+
+Galeria de imagens
+
+Vídeos do produto
+
+Produtos recomendados
+
+Histórico de produtos visualizados
+
+Pesquisa recente
+
+Filtros personalizados
+
+Cupons de desconto
+
+Brindes
+
+Campanhas promocionais
+
+Banner rotativo
+
+Modo vitrine
+
+Modo catálogo
+
+Modo apresentação
+
+PDF da lista de interesse
+
+Exportação para PDF
+
+Exportação para Excel
+
+---
+
+# Compartilhamento
+
+Cada produto deverá possuir estrutura preparada para compartilhamento.
+
+Exemplo:
+
+WhatsApp
+
+Instagram
+
+Facebook
+
+Copiar link
+
+QR Code
+
+Web Share API
+
+Preparar URLs amigáveis para futura integração.
+
+---
+
+# Estrutura para futuras integrações
+
+A arquitetura deverá prever integração futura com:
+
+ASP.NET Core
+
+Node.js
+
+Laravel
+
+Firebase
+
+Supabase
+
+MySQL
+
+PostgreSQL
+
+SQL Server
+
+MongoDB
+
+GraphQL
+
+REST API
+
+Sem necessidade de alterar a interface da aplicação.
+
+---
+
+# Preparação para autenticação
+
+Mesmo que inicialmente não exista login, a arquitetura deverá prever futura implementação de:
+
+Administrador
+
+Operador
+
+Vendedor
+
+Cliente
+
+Permissões
+
+Perfis de acesso
+
+JWT
+
+OAuth
+
+Login Social
+
+---
+
+# Evolução para plataforma de vendas
+
+O projeto deverá estar preparado para evoluir futuramente para um sistema completo contendo:
+
+Cadastro de clientes
+
+Cadastro de usuários
+
+Pedidos
+
+Orçamentos
+
+Carrinho persistente
+
+Checkout
+
+Pagamento
+
+PIX
+
+Cartão
+
+Mercado Pago
+
+Stripe
+
+PayPal
+
+Frete
+
+Correios
+
+Transportadoras
+
+Controle de estoque
+
+Movimentação de estoque
+
+Pedidos finalizados
+
+Histórico de compras
+
+Painel administrativo completo
+
+Dashboard financeiro
+
+Relatórios
+
+Notificações
+
+E-mails automáticos
+
+Integração com WhatsApp Business API
+
+Integração com Instagram Shopping
+
+Integração com Facebook Catalog
+
+---
+
+# Arquitetura
+
+Toda a aplicação deverá ser construída utilizando desacoplamento entre:
+
+Interface
+
+Componentes
+
+Serviços
+
+Regras de negócio
+
+Persistência
+
+Configurações
+
+Comunicação
+
+A troca da fonte de dados (JSON → API) deverá ocorrer apenas na camada responsável pelo carregamento dos dados.
+
+---
+
+# Objetivo arquitetural
+
+A aplicação deve ser considerada uma MVP (Minimum Viable Product), porém construída utilizando padrões profissionais.
+
+O código produzido deverá ser suficientemente organizado para suportar anos de evolução sem necessidade de reestruturação significativa.
+
+O resultado final deve transmitir a sensação de um e-commerce premium, com arquitetura moderna, código limpo, alta performance, excelente experiência do usuário e preparada para crescimento contínuo.
+
