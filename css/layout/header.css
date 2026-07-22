@@ -1,0 +1,165 @@
+/* ============================================================
+ * Header — navegação principal + busca + ações
+ * Glassmorphism sutil, sticky no topo.
+ * ============================================================ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    background: var(--cor-superficie-glass);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--cor-borda);
+    transition: box-shadow var(--transicao-base);
+}
+
+.header--elevado { box-shadow: var(--sombra-sm); }
+
+.header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--sp-4);
+    min-height: var(--altura-header);
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    color: var(--cor-texto);
+    transition: opacity var(--transicao-rapida);
+}
+.header__brand:hover { opacity: 0.8; }
+
+.header__logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--raio-sm);
+}
+
+.header__brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+.header__brand-text strong { font-size: var(--fs-md); font-weight: var(--peso-semibold); letter-spacing: -0.02em; }
+.header__brand-text small { font-size: var(--fs-xs); color: var(--cor-texto-fraco); }
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+}
+
+/* Botão de ícone circular */
+.icon-btn {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--raio-full);
+    color: var(--cor-texto);
+    font-size: 1.15rem;
+    transition: background-color var(--transicao-rapida), transform var(--transicao-rapida);
+}
+.icon-btn:hover { background: var(--cor-borda); }
+.icon-btn:active { transform: scale(0.94); }
+
+.icon-btn--primary {
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+}
+.icon-btn--primary:hover { background: var(--cor-primaria-hover); }
+
+.icon-btn__badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-secundaria);
+    color: #0A0A0A;
+    border-radius: var(--raio-full);
+    font-size: 0.7rem;
+    font-weight: var(--peso-bold);
+    border: 2px solid var(--cor-superficie);
+    animation: pop var(--transicao-base) var(--easing-out);
+}
+
+/* Nav de categorias */
+.categorias-nav {
+    border-top: 1px solid var(--cor-borda);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.categorias-nav::-webkit-scrollbar { display: none; }
+
+.categorias-nav__inner {
+    display: flex;
+    gap: var(--sp-2);
+    align-items: center;
+    min-height: var(--altura-categorias);
+    padding-block: var(--sp-2);
+    white-space: nowrap;
+}
+
+.categorias-nav__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--raio-full);
+    color: var(--cor-texto-suave);
+    font-size: var(--fs-sm);
+    font-weight: var(--peso-medio);
+    border: 1px solid transparent;
+    transition: all var(--transicao-rapida);
+    cursor: pointer;
+    background: transparent;
+}
+.categorias-nav__item:hover {
+    background: var(--cor-borda);
+    color: var(--cor-texto);
+}
+.categorias-nav__item--ativo {
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+    border-color: var(--cor-texto);
+}
+.categorias-nav__item i { font-size: 1rem; }
+
+/* Responsivo header */
+@media (max-width: 768px) {
+    .header__inner {
+        grid-template-columns: auto 1fr auto;
+        gap: var(--sp-2);
+    }
+    .header__brand-text { display: none; }
+    .header__brand-text strong { font-size: var(--fs-sm); }
+}
+
+@media (max-width: 480px) {
+    .icon-btn { width: 38px; height: 38px; }
+}
+
+/* Skip link (acessibilidade) */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: var(--sp-4);
+    padding: var(--sp-3) var(--sp-5);
+    background: var(--cor-texto);
+    color: var(--cor-texto-invertido);
+    z-index: 9999;
+    border-radius: var(--raio-sm);
+    transition: top var(--transicao-rapida);
+}
+.skip-link:focus-visible { top: var(--sp-3); }

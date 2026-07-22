@@ -1,0 +1,97 @@
+/* ============================================================
+ * Seção — bloco padrão de conteúdo
+ * ============================================================ */
+
+.main { padding-bottom: var(--sp-9); }
+
+.secao { padding-block: var(--sp-7); }
+
+.secao__header {
+    margin-bottom: var(--sp-5);
+}
+
+.secao__header--flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    flex-wrap: wrap;
+}
+
+.secao__titulo {
+    margin-bottom: var(--sp-1);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.secao__subtitulo {
+    color: var(--cor-texto-fraco);
+    font-size: var(--fs-sm);
+}
+
+/* Grid de produtos */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+    gap: clamp(var(--sp-3), 2vw, var(--sp-5));
+}
+
+@media (max-width: 480px) {
+    :root { --card-min: 160px; }
+    .produtos-grid { gap: var(--sp-3); }
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+}
+
+.ordenacao {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+.ordenacao__select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: var(--sp-2) var(--sp-6) var(--sp-2) var(--sp-4);
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-sm);
+    font-size: var(--fs-sm);
+    color: var(--cor-texto);
+    cursor: pointer;
+    transition: border-color var(--transicao-rapida);
+}
+.ordenacao__select:hover { border-color: var(--cor-borda-forte); }
+.ordenacao__icone {
+    position: absolute;
+    right: var(--sp-3);
+    pointer-events: none;
+    color: var(--cor-texto-fraco);
+    font-size: 0.8rem;
+}
+
+/* Paginação */
+.paginacao {
+    margin-top: var(--sp-6);
+    display: flex;
+    justify-content: center;
+}
+
+/* Estado vazio */
+.estado-vazio {
+    text-align: center;
+    padding: var(--sp-8) var(--sp-4);
+    color: var(--cor-texto-suave);
+}
+.estado-vazio__icone {
+    font-size: 3rem;
+    color: var(--cor-texto-fraco);
+    display: block;
+    margin-bottom: var(--sp-3);
+}
+.estado-vazio h3 { margin-bottom: var(--sp-2); }
+.estado-vazio p { margin-bottom: var(--sp-4); }
